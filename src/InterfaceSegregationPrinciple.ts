@@ -5,37 +5,77 @@
 
 */
 
-class Ave {
-    public voar() {}
-    public eat() {}
-    public reproduce() {}
-}
+// Classes "Normais"
+// Classes Abstratas
+// Interfaces
 
-class Pardal extends Ave {
-    public eat() {
+// Errado
+// class Ave {
+//     public voar() {}
+//     public eat() {}
+//     public reproduce() {}
+// }
+
+// class Pardal extends Ave {
+//     public eat() {
         
-    }
+//     }
     
-    public reproduce() {
+//     public reproduce() {
         
-    }
+//     }
 
-    public voar() {
+//     public voar() {
 
-    }
-}
+//     }
+// }
 
-class Pinguim extends Ave {
-    public eat() {
+// class Pinguim extends Ave {
+//     public eat() {
         
-    }
+//     }
     
-    public reproduce() {
+//     public reproduce() {
+        
+//     }
+
+//     // Pinguim voa????
+//     public voar() {
+        
+//     }
+// }
+
+// Certo
+interface CanFly {
+    voar(): void;
+}
+
+interface Aves {
+    eat(): void;
+    reproduce(): void;
+}
+
+class Pardal implements CanFly, Aves {
+    public eat(): void {
+
+    }
+
+    public reproduce(): void {
+
+    }
+
+    public voar(): void {
+        
+    }
+}
+
+class Pinguim implements Aves{
+    public eat(): void {
         
     }
 
-    // Pinguim voa????
-    public voar() {
-
+    public reproduce(): void {
+        
     }
 }
+
